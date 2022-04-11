@@ -10,5 +10,3 @@ def fastFib(n):
     for i in range(2, n+1):
         fibList[i] = fibList[i-2] + fibList[i-1]
     return fibList[n]
-#print(slowFib(75))
-#print(fastFib(75))
