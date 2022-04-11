@@ -4,7 +4,7 @@
 #value of the gcd), and uses recursion instead of iteration. I thought about including a check for whether b = 0, but that would ruin the
 #simplicity a bit. 
 def gcd(a:int, b:int):
-    r = a % b;
+    r = a % b
     if (r == 0):
-        return abs(b);
-    return gcd(b, r);
+        return abs(b)
+    return gcd(b, r)
