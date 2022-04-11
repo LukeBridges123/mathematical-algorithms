@@ -15,3 +15,5 @@ Fermat primality test: the main attraction of the "Primality Test Comparison" fi
 
 
 Random prime generator: does exactly what it says on the tin; generates a random prime number of n digits. Since the Fermat test is used, has a very slight chance of generating a composite number.
+
+Fibonacci: naive, exponential-time and improved, polynomial-time algorithms for calculating the nth Fibonacci number. (Assuming that the 1st and 2nd Fibonacci numbers are both 1.)
