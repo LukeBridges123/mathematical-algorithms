@@ -6,7 +6,12 @@ def slowFib(n):
     else:
         return slowFib(n-2) + slowFib(n-1)
 def fastFib(n):
-    fibList = [0, 1] + [0] * (n-1)
-    for i in range(2, n+1):
-        fibList[i] = fibList[i-2] + fibList[i-1]
-    return fibList[n]
+    i = 1
+    a = 0
+    b = 1
+    while (i < n):
+        temp = b
+        b = a + b
+        a = temp
+        i += 1
+    return b
