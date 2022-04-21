@@ -1,34 +1,27 @@
 #Implementation of the Sieve of Eratosthenes for enumerating all of the primes less than some integer n. Also includes a minor variant of it,
 #written for a Project Euler problem, which sums up the primes below n instead of returning a list of them.
 def primeSieve(n):
-    lim = n + 1
-    boolList = [True] * lim
-    primeList = []
-    currNum = 2
-    while (currNum < lim):
-        primeList.append(currNum)
-        i = currNum * 2
-        while (i < lim):
-            boolList[i] = False
-            i += currNum
-        currNum += 1
-        while (currNum < lim and boolList[currNum] == False):
-            currNum += 1
+    boolList = [True] * (n + 1);
+    primeList = [];
+    for i in range (2, (n + 1)):
+        if (boolList[i]):
+            primeList.append(i)
+            j = 2 * i
+            while (j < (n + 1)):
+                boolList[j] = False
+                j += i
     return primeList
 
 def sumSieve(n):
-    total = 0
-    lim = n + 1
-    boolList = [True] * lim
-    currNum = 2
-    while (currNum < lim):
-        total += currNum
-        i = currNum * 2
-        while (i < lim):
-            boolList[i] = False
-            i += currNum
-        i = currNum + 1
-        currNum += 1
-        while (currNum < lim and boolList[currNum] == False):
-            currNum += 1
-    print(total)
+    total = 0;
+    boolList = [True] * (n + 1);
+    primeList = [];
+    for i in range (2, (n + 1)):
+        if (boolList[i]):
+            total += i
+            primeList.append(i)
+            j = 2 * i
+            while (j < (n + 1)):
+                boolList[j] = False
+                j += i
+    return total
