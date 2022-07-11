@@ -1,5 +1,5 @@
-# number-theory-algorithms
-This repository contains implementations of various algorithms I've learned about while studying number theory. This file contains some general descriptions of what the algorithms do, not including proofs of correctness (maybe once I've got my notes fully transfered from various notebooks into text I'll do that). The repository currently includes:
+# mathematical algorithms
+This repository contains implementations of various mathematical algorithms I've learned about.
 
 
 The Euclidean Algorithm: simple recursive algorithm that computes the greatest common divisor of two integers. Given two numbers a and b, it computes a % b = r. If r = 0, then b divides a, so gcd(a, b) = b, so the algorithm can return b and terminate. Otherwise, since gcd(a, b) = gcd(b, r), the process can be repeated, computing b % r, and then repeated again, and so on, until a remainder of 0 is found, and then the gcd can be returned. 
